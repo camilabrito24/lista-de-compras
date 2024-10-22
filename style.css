@@ -133,7 +133,7 @@ ul{
 .checked::after{
     content: "";
     position: absolute;
-    left: 29%;
+    left: 31%;
     top: -10%;
     width: 5px;
     height: 14px;
