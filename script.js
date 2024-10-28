@@ -13,6 +13,9 @@ function adicionarItem(evento){
     containerItemLista.classList.add("item-lista-container");
 
     //const containerNomeItem = document.createElement("div");
+    const itemListaTitulo = document.createElement("div");
+    itemListaTitulo.classList.add("item-lista-titulo");
+
     const containerCheckbox = document.createElement("div");
     containerCheckbox.classList.add("checkbox-container");
     const inputCheckbox = document.createElement("input");
@@ -46,12 +49,13 @@ function adicionarItem(evento){
     labelCheckbox.appendChild(inputCheckbox);
     labelCheckbox.appendChild(checkboxCustomizado);
     containerCheckbox.appendChild(labelCheckbox);
-    containerItemLista.appendChild(containerCheckbox);
+    itemListaTitulo.appendChild(containerCheckbox);
+    containerItemLista.appendChild(itemListaTitulo);
 
     const nomeItem = document.createElement("p");
     nomeItem.id = "item-titulo";
     nomeItem.innerText = item.value;
-    containerItemLista.appendChild(nomeItem);
+    itemListaTitulo.appendChild(nomeItem);
 
     const containerBtn = document.createElement("div");
     const btnRemover = document.createElement("button");
