@@ -1,4 +1,5 @@
 const listaDeComprados = document.querySelector("#lista-comprados");
+const listaDeCompras = document.querySelector("#lista-de-compras");
 let contador = 0;
 export function criarItemDaLista(item){
     const itemLista = document.createElement("li");
