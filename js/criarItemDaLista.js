@@ -1,4 +1,5 @@
 import {verificarListaComprados} from "./verificarListaComprados.js";
+import {excluirItem} from "./excluirItem.js";
 
 const listaDeComprados = document.querySelector("#lista-comprados");
 const listaDeCompras = document.querySelector("#lista-de-compras");
@@ -61,6 +62,9 @@ export function criarItemDaLista(item){
     const imagemRemover = document.createElement("img");
     imagemRemover.src="img/deletar.png";
     imagemRemover.alt="Remover";
+    btnRemover.addEventListener("click", function (){
+        excluirItem(itemLista);
+    })
     btnRemover.appendChild(imagemRemover);
     containerBtn.appendChild(btnRemover);
 
