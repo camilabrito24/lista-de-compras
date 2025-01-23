@@ -11,5 +11,7 @@ export const editarItem = (elemento) => {
             elemento.querySelector(".checkbox-customizado").classList.add("checked");
             itemTextoAtualizado.style.textDecoration = "line-through";
         }
+
+        elemento.querySelector(".item-lista-texto").innerText = `${new Date().toLocaleDateString("pt-BR",{weekday:"long"})} (${new Date().toLocaleDateString()}) às ${new Date().toLocaleTimeString("pt-BR",{hour: "numeric", minute:"numeric"})}`;
     }
 }

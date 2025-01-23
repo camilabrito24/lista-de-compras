@@ -7,7 +7,13 @@ const listaDeCompras = document.querySelector("#lista-de-compras");
 export function adicionarItem(evento){
     evento.preventDefault();
 
+    if(item.value === ""){
+        alert("Por favor, insira um item!")
+        return
+    }
+
     const itemLista =  criarItemDaLista(item.value);
     listaDeCompras.appendChild(itemLista);
     verificarListaVazia(listaDeCompras);
+    item.value = "";
 }
